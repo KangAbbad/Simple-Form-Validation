@@ -1,4 +1,4 @@
-# Simple Form Validation
+# Simple Utils
 
 Simple form validation build with pure Javascript
 
@@ -20,5 +20,20 @@ const isValidEmail = (string) => {
 String.prototype.isValidEmail = function () {
   let regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/
   return regex.test(this)
+}
+```
+
+### Covert bytes to KB, MB, GB
+
+```javascript
+const getReadableFileSizeString = (fileSizeInBytes) => {
+  let i = -1
+  const byteUnits = [' KB', ' MB', ' GB', ' TB', 'PB', 'EB', 'ZB', 'YB']
+  do {
+    fileSizeInBytes = fileSizeInBytes / 1024
+    i++
+  } while (fileSizeInBytes > 1024)
+
+  return Math.max(fileSizeInBytes, 0.1).toFixed(1) + byteUnits[i]
 }
 ```
