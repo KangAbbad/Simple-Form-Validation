@@ -23,6 +23,21 @@ String.prototype.isValidEmail = function () {
 }
 ```
 
+### Password Validation
+```javascript
+const isStrongPassword = (string) => {
+  let regex = ^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$
+  return regex.test(string)
+}
+```
+
+- ^.*              : Start
+- (?=.{8,})        : Length
+- (?=.*[a-zA-Z])   : Letters
+- (?=.*\d)         : Digits
+- (?=.*[!#$%&? "]) : Special characters
+- .*$              : End
+
 ### Covert bytes to KB, MB, GB
 
 ```javascript
