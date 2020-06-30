@@ -57,7 +57,7 @@ const getReadableFileSizeString = (fileSizeInBytes) => {
 
 ```javascript
 const arr1 = [{ id: "001", name: "kang" }, { id: "002", name: "abbad" }, { id: "003", name: "naufal" }]
-const arr2 = [{ id: "001", name: "kang" }, { id: "004", name: "albert" }]
+const arr2 = [{ id: "001", name: "kang" }, { id: "002", name: "abbad" }]
 
 const filtered = arr1.filter((base) => {
   return !arr2.find((target) => {
