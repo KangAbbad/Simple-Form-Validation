@@ -52,3 +52,16 @@ const getReadableFileSizeString = (fileSizeInBytes) => {
   return Math.max(fileSizeInBytes, 0.1).toFixed(1) + byteUnits[i]
 }
 ```
+
+### Remove duplicates object from two array
+
+```javascript
+const arr1 = [{ id: "001", name: "kang" }, { id: "002", name: "abbad" }, { id: "003", name: "naufal" }]
+const arr2 = [{ id: "001", name: "kang" }, { id: "004", name: "albert" }]
+
+const filtered = arr1.filter((base) => {
+  return !arr2.find((target) => {
+    return target.id === base.id
+  })
+})
+```
